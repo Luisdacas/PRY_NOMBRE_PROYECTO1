@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="es" class="h-100" data-bs-theme="auto">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors" />
+    <meta name="generator" content="Astro v5.13.2" />
+    <title>Parque Tecnológico</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sticky-footer-navbar/" />
+    <script src="../assets/js/color-modes.js"></script>
+    <link href="./public/vendor/bootstrap/template/css/bootstrap.min.css" rel="stylesheet" />
+    <meta name="theme-color" content="#712cf9" />
+    <link href="./public/vendor/bootstrap/template/css/sticky-footer-navbar.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./public/css/style.css">
+</head>
+
+
+
+<body class="d-flex flex-column h-100">
+
+    <header>
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+                <img src="./public/img/3175232.png" width="3%">
+                <a class="navbar-brand" href="#">Parque Tecnológico</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Encuesta</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-disabled="true">Disabled(Desabilitado)</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" />
+                        <button class="btn btn-outline-success" type="submit">
+                            Buscar
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <br><br><br><br>
+        <h1 id="titulo">
+            ENCUESTA DE SASTIFACCIÓN DEL PARQUE TECNOLÓGICO
+        </h1>
+        <h2 id="subtitulo">
+            Todo es posible si tu lo crees todo, como este parque Tecnológico que demuestra que es posible el avance y
+            que evolucionemos a una mejor versión.
+        </h2>
+    </header>
+
+
+
+    <!-- Begin page content -->
+    <main class="flex-shrink-0">
+        <div class="container">
+            <form action="server.html" method="get">
+                <section class="datos">
+                    <h3 id="tituloss">
+                        <img src="./public/img/datos.png" width="4%">
+                        Datos Personales
+                    </h3>
+                    <label for="nombre">Nombre Completo: </label>
+                    <input type="text" required placeholder="Ingrese nombre completo" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+"
+                        class="datos" id="nombre">
+                    <br>
+                    <label for="correo">Correo Electrónico: </label>
+                    <input type="email" required placeholder="name@example.com" class="datos" id="correo">
+                    <br>
+                    <label for="edad">Edad: </label>
+                    <input type="number" required min="10" max="100" placeholder="Ej:45" class="datos" id="edad">
+                </section>
+                <br>
+                <section class="opinion">
+                    <h3 id="tituloss">
+                        <img src="./public/img/opini.png" width="4%">
+                        Opiniones
+                    </h3>
+                    <label for="nivel">Nivel de sastifaccion: </label>
+                    <input type="range" name="opinion" id="nivel" min="1" max="10" step="1">
+                    <br>
+                    <label for="date">Fecha de visita: </label>
+                    <input type="date" required max="2025-11-12" class="opinion" id="date">
+                    <br>
+                    <label for="time">Hora de llegada: </label>
+                    <input type="time" name="opinion" id="time" required>
+                    <br>
+                    <label for="gustos">¿Que te gustó más?</label>
+                    <br>
+                    <label for="tecnologia">Tecnología</label> <input type="checkbox" name="gustos[]" id="tecnologia">
+                    <label for="Naturaleza">Naturaleza</label> <input type="checkbox" name="gustos[]" id="Naturaleza">
+                    <label for="comida">Comida</label> <input type="checkbox" name="gustos[]" id="comida">
+                    <br>
+                    <label for="recomendar">Recomendarias el parque:</label>
+                    <br>
+                    <label for="si">SI</label> <input type="radio" name="reco" id="si" required>
+                    <label for="no">NO</label> <input type="radio" name="reco" id="no" required>
+                </section>
+                <br>
+                <section class="sugerencia">
+                    <h3 id="tituloss">
+                        <img src="./public/img/sugerencia.png" alt="" width="4%">
+                        Sugerencia
+                    </h3>
+                    <label for="sugerencia">Comentario:</label>
+                    <br>
+                    <textarea name="sugerencia" id="sugerencia" maxlength="200" placeholder="Escribe tu opinión..."
+                        rows="3" cols="20"></textarea>
+                </section>
+                <br>
+                <section class="seguridad">
+                    <h3 id="tituloss">
+                        <img src="./public/img/seguri.png" alt="" width="4%">
+                        Seguridad
+                    </h3>
+                    <label for="verificacion">Ingrese el código de verificación: </label> <input type="text"
+                        name="verificacion" id="verificacion" required pattern="[A-Z][a-z][a-z][a-z][0-9][0-9]"
+                        placeholder="Ej: Lcds12">
+                </section>
+                <br>
+                <br>
+                <section class="botones">
+                    <button type="submit" class="btn btn-success">ENVIAR FORMULARIO</button>
+                    <button type="reset" class="btn btn-danger">LIMPIAR</button>
+                </section>
+            </form>
+        </div>
+    </main>
+
+
+
+    <br><br><br>
+
+
+    <footer class="footer mt-auto py-3 bg-body-tertiary">
+        <div class="container">
+            <p>Copyright Luis DavidC &copy; 2025</p>
+        </div>
+    </footer>
+    <script src="../assets/dist/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
+</body>
+
+</html>
