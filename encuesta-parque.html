@@ -35,7 +35,7 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">Encuesta</a>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#seguridad">Seguridad</a></li>
                         <li class="nav-item">
                             <a class="nav-link disabled" aria-disabled="true">Disabled(Desabilitado)</a>
                         </li>
@@ -65,7 +65,7 @@
     <main class="flex-shrink-0">
         <div class="container">
             <form action="server.html" method="get">
-                <section class="datos">
+                <section id="datos">
                     <h3 id="tituloss">
                         <img src="./public/img/datos.png" width="4%">
                         Datos Personales
@@ -81,7 +81,7 @@
                     <input type="number" required min="10" max="100" placeholder="Ej:45" class="datos" id="edad">
                 </section>
                 <br>
-                <section class="opinion">
+                <section id="opinion">
                     <h3 id="tituloss">
                         <img src="./public/img/opini.png" width="4%">
                         Opiniones
@@ -107,7 +107,7 @@
                     <label for="no">NO</label> <input type="radio" name="reco" id="no" required>
                 </section>
                 <br>
-                <section class="sugerencia">
+                <section id="sugerencia">
                     <h3 id="tituloss">
                         <img src="./public/img/sugerencia.png" alt="" width="4%">
                         Sugerencia
@@ -118,7 +118,7 @@
                         rows="3" cols="20"></textarea>
                 </section>
                 <br>
-                <section class="seguridad">
+                <section id="seguridad">
                     <h3 id="tituloss">
                         <img src="./public/img/seguri.png" alt="" width="4%">
                         Seguridad
@@ -129,7 +129,7 @@
                 </section>
                 <br>
                 <br>
-                <section class="botones">
+                <section id="botones">
                     <button type="submit" class="btn btn-success">ENVIAR FORMULARIO</button>
                     <button type="reset" class="btn btn-danger">LIMPIAR</button>
                 </section>
